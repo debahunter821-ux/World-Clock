@@ -28,6 +28,11 @@ h2 {
   margin: 0 0 10px;
 }
 
+.timezone {
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+
 .date {
   opacity: 0.6;
 }

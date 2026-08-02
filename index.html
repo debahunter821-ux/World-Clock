@@ -14,25 +14,37 @@
       <h1>🕒 World Clock 🕤</h1>
 
       
-      <select id="city-select">
+      <select id="city-select" title="Choose a city">
         <option value="">-Choose a city...-</option>
         <option value="Current">Current Location</option>
         <option value="Europe/London">London</option>
         <option value="Asia/Tokyo">Tokyo</option>
         <option value="America/New_York">New York</option>
+        <option value="Pacific/Honolulu">Honolulu</option>
       </select>
 
       <div id="cities">
+        <div class="city" id="local">
+          <div>
+            <h2>Your time</h2>
+            <div class="timezone"></div>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+
         <div class="city" id="moscow">
           <div><h2>Moscow</h2>
           <div class="date"></div></div>
           <div class="time"></div>
         </div>
+
         <div class="city" id="paris">
          <div> <h2>Paris</h2>
           <div class="date"></div></div>
           <div class="time"></div>
         </div>
+        
         <div class="city" id="sydney">
           <div><h2>Sydney</h2>
           <div class="date"></div></div>
@@ -42,7 +54,7 @@
     </div>
     <footer>
       This project was coded by 💞<strong>Debbie Hunter</strong>, is
-      <a href="https://github.com/debbihunter/world-clock" target="_blank"
+      <a href="https://github.com/debbihunter/world-clock" target="_blank" rel="noopener noreferrer"
         >open sourced on GitHub.</a
       >      
     </footer>

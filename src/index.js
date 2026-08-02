@@ -1,4 +1,21 @@
 function updateTime() {
+  let localElement = document.querySelector("#local");
+  if (localElement) {
+    let localTimezoneElement = localElement.querySelector(".timezone");
+    let localDateElement = localElement.querySelector(".date");
+    let localTimeElement = localElement.querySelector(".time");
+    let localTimeZone = moment.tz.guess();
+    let localTime = moment().tz(localTimeZone);
+
+    localTimezoneElement.innerHTML = localTimeZone
+      .replace(/_/g, " ")
+      .split("/")[1];
+    localDateElement.innerHTML = localTime.format("D MMMM YYYY");
+    localTimeElement.innerHTML = localTime.format(
+      "h:mm:ss [<small>]a[</small>]",
+    );
+  }
+
   let moscowElement = document.querySelector("#moscow");
   if (moscowElement) {
     moscowDateElement = moscowElement.querySelector(".date");
@@ -41,6 +58,7 @@ function updateCity(event) {
   if (cityTimeZone === "Current") {
     cityTimeZone = moment.tz.guess();
   }
+
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
